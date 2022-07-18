@@ -1,20 +1,20 @@
 fun main() {
     println("Ola, bytebank")
-    val holder = "Rodrigo Vaz"
-    val accountNumber = 1000
-    var balance = 100.0
-    balance += 200
+    val account = Account()
+    account.titular = "rodrigo vaz"
+    println(account.titular)
 
-    println("titular da conta $holder")
-    println("numero de conta: $accountNumber")
-    println("saldo da conta: $balance")
+    val accountMari = Account()
+    accountMari.titular = "Conta da mariana"
+    println(accountMari.titular)
+}
 
-    // testaCondicoes(balance)
+class Account {
+    var titular = ""
+    var numberAccount = 0
+    var balance = 0.0
 
 
-    for (i in 9 downTo 0 step 2) {
-        println(i)
-    }
 }
 
 fun testaCondicoes(balance: Double) {
@@ -32,4 +32,33 @@ fun testaCondicoes(balance: Double) {
         balance < 0.0 -> println("O saldo e negativo")
     }
 
+}
+
+
+fun loopsTests() {
+
+    for (i in 9 downTo 0 step 2) {
+        println(i)
+    }
+    var i = 0;
+    while (i < 5) {
+        val holder = "Rodrigo Vaz $i"
+        val accountNumber = 1000
+        var balance = 100.0 * i
+        println("titular da conta $holder")
+        println("numero de conta: $accountNumber")
+        println("saldo da conta: $balance")
+        i++;
+    }
+}
+
+fun testeVariaveis() {
+    val holder = "Rodrigo Vaz"
+    val accountNumber = 1000
+    var balance = 100.0
+    balance += 200
+
+    println("titular da conta $holder")
+    println("numero de conta: $accountNumber")
+    println("saldo da conta: $balance")
 }
