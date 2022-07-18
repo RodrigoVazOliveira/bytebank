@@ -1,6 +1,5 @@
 fun main() {
     println("Ola, bytebank")
-
 }
 
 class Account {
@@ -8,10 +7,9 @@ class Account {
     var numberAccount = 0
     var balance = 0.0
 
-}
-
-fun depositar(account: Account, value: Double) {
-    account.balance += value
+    fun depositar(value: Double) {
+        balance += value
+    }
 }
 
 fun testaCondicoes(balance: Double) {
@@ -88,6 +86,6 @@ fun testeOrientacaoAObjecto() {
     println("A titula da conta joao ${accountJoao.titular}")
     println("O titular da conta maria e ${accountMaria.titular}")
 
-    depositar(accountJoao, 250.00)
-    depositar(accountMaria, 25079.00)
+    accountJoao.depositar(2500.00)
+    accountMaria.depositar(1500.00)
 }
