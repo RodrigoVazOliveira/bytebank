@@ -1,5 +1,6 @@
 fun main() {
     println("Ola, bytebank")
+    testeOrientacaoAObjecto()
 }
 
 class Account {
@@ -9,6 +10,12 @@ class Account {
 
     fun depositar(value: Double) {
         balance += value
+    }
+
+    fun sacar(value: Double) {
+        if (balance >= value) {
+            balance -= value
+        }
     }
 }
 
@@ -88,4 +95,14 @@ fun testeOrientacaoAObjecto() {
 
     accountJoao.depositar(2500.00)
     accountMaria.depositar(1500.00)
+
+    println("saldo atual de joao ${accountJoao.balance}")
+    println("saldo atual de maiar ${accountMaria.balance}")
+
+    accountJoao.sacar(250.00)
+    accountMaria.sacar(2500.00)
+
+    println("saldo atual de joao ${accountJoao.balance}")
+    println("saldo atual de maiar ${accountMaria.balance}")
+
 }
