@@ -9,6 +9,7 @@ class Account {
     var titular = ""
     var numberAccount = 0
     var balance = 0.0
+        private set
 
     fun depositar(value: Double) {
         balance += value
@@ -29,6 +30,8 @@ class Account {
 
         return false
     }
+
+
 }
 
 fun testaCondicoes(balance: Double) {
@@ -85,7 +88,7 @@ fun testeOrientacaoAObjecto() {
     val accountMari = Account()
     accountMari.titular = "Conta da mariana"
     accountMari.numberAccount = 1001
-    accountMari.balance = 1000.00
+    accountMari.depositar(25000.00)
     println(accountMari.titular)
     println(accountMari.numberAccount)
     println(accountMari.balance)
@@ -107,6 +110,7 @@ fun testeOrientacaoAObjecto() {
 
     accountJoao.depositar(2500.00)
     accountMaria.depositar(1500.00)
+
 
     println("saldo atual de joao ${accountJoao.balance}")
     println("saldo atual de maiar ${accountMaria.balance}")
