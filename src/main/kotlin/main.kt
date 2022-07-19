@@ -1,3 +1,5 @@
+import java.util.DoubleSummaryStatistics
+
 fun main() {
     println("Ola, bytebank")
     testeOrientacaoAObjecto()
@@ -16,6 +18,16 @@ class Account {
         if (balance >= value) {
             balance -= value
         }
+    }
+
+    fun transfer(destination: Account, value: Double): Boolean {
+        if (balance >= value) {
+            balance -= value
+            destination.depositar(value)
+            return true
+        }
+
+        return false
     }
 }
 
@@ -104,5 +116,11 @@ fun testeOrientacaoAObjecto() {
 
     println("saldo atual de joao ${accountJoao.balance}")
     println("saldo atual de maiar ${accountMaria.balance}")
+
+    if (accountJoao.transfer(accountMaria, 250.00)) {
+        println("tranferencia efetuada com sucesso")
+    } else {
+        println("transferencia nao efetuada")
+    }
 
 }
