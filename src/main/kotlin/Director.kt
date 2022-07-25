@@ -10,9 +10,7 @@ class Director(
     salary
 ) {
 
-    override fun bonicute(): Double {
-        return this.salary * 0.2;
-    }
+    override val bonicute: Double get() = this.salary * 0.2;
 
     fun isEqualPassword(password: String) : Boolean {
         return this.password == password;

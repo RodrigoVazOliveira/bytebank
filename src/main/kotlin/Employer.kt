@@ -3,9 +3,7 @@ open class Employer(
     val cpf: String,
     val salary: Double,
 ) {
-    open fun bonicute(): Double {
-        return this.salary * 0.1;
-    }
+    open val bonicute: Double get() = this.salary * 0.1;
 
     override fun toString(): String {
         return "Employer(name='$name', cpf='$cpf', salary=$salary)"

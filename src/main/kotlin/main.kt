@@ -8,7 +8,7 @@ fun main() {
     )
 
     println(rodrigo)
-    println("Cualcular a bonificacao ${rodrigo.bonicute()}")
+    println("Cualcular a bonificacao ${rodrigo.bonicute}")
 
 
     val roberto = Manager(
@@ -19,7 +19,7 @@ fun main() {
     )
 
     println(roberto)
-    println("bonificacao do roberto e de : ${roberto.bonicute()}")
+    println("bonificacao do roberto e de : ${roberto.bonicute}")
 
     if (roberto.isEqualPassword("123456")) {
         println("autenticacao realizada com sucess!")
@@ -37,7 +37,7 @@ fun main() {
     )
 
     println(leandro)
-    println("bonificacao do Leandro e de : ${leandro.bonicute()}")
+    println("bonificacao do Leandro e de : ${leandro.bonicute}")
 
     if (leandro.isEqualPassword("123456")) {
         println("autenticacao realizada com sucess!")
