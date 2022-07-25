@@ -10,11 +10,7 @@ class Manager(
 ) {
 
     fun isEqualPassword(password: String) : Boolean {
-        if (password != password) {
-            return false;
-        }
-
-        return true;
+        return this.password == password;
     }
 
     override fun bonicute(): Double {

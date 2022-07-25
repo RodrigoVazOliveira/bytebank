@@ -26,4 +26,24 @@ fun main() {
     } else {
         println("Senha incorreta")
     }
+
+
+    val leandro = Director(
+        name = "Leandro Luz",
+        cpf = "000.002.000-11",
+        salary = 20000.0,
+        plr = 200.00,
+        password = "1234561"
+    )
+
+    println(leandro)
+    println("bonificacao do Leandro e de : ${leandro.bonicute()}")
+
+    if (leandro.isEqualPassword("123456")) {
+        println("autenticacao realizada com sucess!")
+    } else {
+        println("Senha incorreta")
+    }
+
+
 }
