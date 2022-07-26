@@ -13,7 +13,7 @@ class Manager(
         return this.password == password;
     }
 
-    override val bonicute: Double get() = this.salary * 0.2;
+    override val bonicute: Double get() = super.bonicute + this.salary
 
     override fun toString(): String {
         return super.toString() + " Manager(password='$password')"

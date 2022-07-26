@@ -45,5 +45,18 @@ fun main() {
         println("Senha incorreta")
     }
 
+    val maria = Analyst(
+        name = "Maria da nazare",
+        salary = 2000.0,
+        cpf = "32423423423"
+    )
+
+    val calculateBonicute = CalculateBonicute()
+    calculateBonicute.register(rodrigo)
+    calculateBonicute.register(roberto)
+    calculateBonicute.register(leandro)
+    calculateBonicute.register(maria)
+
+    println("O total de bonificacao e de: ${calculateBonicute.total}")
 
 }
