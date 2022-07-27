@@ -1,9 +1,10 @@
 fun main() {
 
-    val rodrigo = Employer(
+    val rodrigo = Manager(
         name = "Rodrigo Vaz",
         cpf = "000.000.000-00",
-        salary  = 1000.00
+        salary  = 1000.00,
+        password = "51326"
     )
 
     println(rodrigo)
