@@ -1,8 +1,8 @@
 fun testeOrientacaoAObjecto() {
-    val account = Account(titular = "rodrigo vaz", numberAccount = 1000)
+    val account = AccountChain(titular = "rodrigo vaz", numberAccount = 1000)
     println(account.titular)
 
-    val accountMari = Account(numberAccount = 1001, titular = "Conta da mariana")
+    val accountMari = AccountSaving(numberAccount = 1001, titular = "Conta da mariana")
     accountMari.depositar(25000.00)
     println(accountMari.titular)
     println(accountMari.numberAccount)
@@ -15,7 +15,7 @@ fun testeOrientacaoAObjecto() {
     println("o numero Y $numeroY")
 
 
-    val accountJoao = Account("Joao", 1002)
+    val accountJoao = AccountChain("Joao", 1002)
     var accountMaria = accountJoao
 
     println("A titula da conta joao ${accountJoao.titular}")

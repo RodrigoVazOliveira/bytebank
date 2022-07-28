@@ -2,14 +2,12 @@ fun main() {
     println("Ola, bytebank")
     val contaCorrente = AccountChain(
         numberAccount = 1001,
-        titular = "Rodrigo Vaz",
-        balance = 1000.00
+        titular = "Rodrigo Vaz"
     )
 
     val accountSaving = AccountSaving(
         numberAccount = 1002,
-        titular = "Blau Araujo",
-        balance = 1100.00
+        titular = "Blau Araujo"
     )
 
     contaCorrente.depositar(200.00)
