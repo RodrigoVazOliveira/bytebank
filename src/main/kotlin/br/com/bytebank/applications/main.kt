@@ -1,4 +1,5 @@
-import br.com.bytebank.Client
+import br.com.bytebank.models.Client
+import br.com.bytebank.Client as ClientRaiz
 import br.com.bytebank.SystemInternal
 import br.com.bytebank.models.employers.Director
 import br.com.bytebank.models.employers.Manager
@@ -14,4 +15,7 @@ fun main() {
     systemInternal.entry(rodrigoClient, "23423423")
 
     println("bonificacao do diretor: ${director.bonicute}")
+
+    val cliente = Client(name = "423", cpf = "3432", password = "3423")
+    val cliente2 = ClientRaiz()
 }
