@@ -1,3 +1,5 @@
+package br.com.bytebank.models.accounts
+
 abstract class Account(val titular: String, val numberAccount: Int) {
 
     var balance: Double = 0.0

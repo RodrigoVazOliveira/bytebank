@@ -1,6 +1,6 @@
 fun main() {
 
-//    val rodrigo = Manager(
+//    val rodrigo = br.com.bytebank.employers.Manager(
 //        name = "Rodrigo Vaz",
 //        cpf = "000.000.000-00",
 //        salary  = 1000.00,
@@ -11,7 +11,7 @@ fun main() {
 //    println("Cualcular a bonificacao ${rodrigo.bonicute}")
 //
 //
-//    val roberto = Manager(
+//    val roberto = br.com.bytebank.employers.Manager(
 //        name = "Roberto Jesus",
 //        cpf = "000.001.000-12",
 //        salary = 5000.0,
@@ -28,7 +28,7 @@ fun main() {
 ////    }
 //
 //
-//    val leandro = Director(
+//    val leandro = br.com.bytebank.employers.Director(
 //        name = "Leandro Luz",
 //        cpf = "000.002.000-11",
 //        salary = 20000.0,
@@ -45,13 +45,13 @@ fun main() {
 //        println("Senha incorreta")
 //    }
 //
-//    val maria = Analyst(
+//    val maria = br.com.bytebank.employers.Analyst(
 //        name = "Maria da nazare",
 //        salary = 2000.0,
 //        cpf = "32423423423"
 //    )
 //
-//    val calculateBonicute = CalculateBonicute()
+//    val calculateBonicute = br.com.bytebank.CalculateBonicute()
 //    calculateBonicute.register(rodrigo)
 //    calculateBonicute.register(roberto)
 //    calculateBonicute.register(leandro)

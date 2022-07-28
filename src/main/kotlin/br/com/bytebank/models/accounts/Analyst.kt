@@ -1,3 +1,7 @@
+package br.com.bytebank.models.accounts
+
+import br.com.bytebank.models.employers.Employer
+
 class Analyst(name: String, cpf: String, salary: Double) : Employer(
     name,
     cpf,
@@ -7,7 +11,7 @@ class Analyst(name: String, cpf: String, salary: Double) : Employer(
     override val bonicute: Double get() = (this.salary * 0.1) + salary
 
     override fun toString(): String {
-        return "${super.toString()} Analyst(bonicute=$bonicute)"
+        return "${super.toString()} br.com.bytebank.employers.Analyst(bonicute=$bonicute)"
     }
 
 

@@ -1,3 +1,5 @@
+package br.com.bytebank.models.accounts
+
 class AccountSaving(titular: String, numberAccount: Int) :
     Account(titular, numberAccount) {
 

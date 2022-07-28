@@ -1,3 +1,5 @@
+package br.com.bytebank.models.employers
+
 abstract class Employer(
     val name: String,
     val cpf: String,
@@ -6,6 +8,6 @@ abstract class Employer(
     abstract val bonicute: Double
 
     override fun toString(): String {
-        return "Employer(name='$name', cpf='$cpf', salary=$salary)"
+        return "br.com.bytebank.employers.Employer(name='$name', cpf='$cpf', salary=$salary)"
     }
 }

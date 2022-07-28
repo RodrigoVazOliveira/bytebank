@@ -1,3 +1,5 @@
+package br.com.bytebank
+
 class SystemInternal {
 
     fun entry(employer: Authenticable, password: String) {

@@ -1,3 +1,7 @@
+package br.com.bytebank.models.employers
+
+import br.com.bytebank.Authenticable
+
 abstract class EmployerAdmin(
     name: String,
     cpf: String,
@@ -9,6 +13,6 @@ abstract class EmployerAdmin(
     }
 
     override fun toString(): String {
-        return "Employer(name='$name', cpf='$cpf', salary=$salary)"
+        return "br.com.bytebank.employers.Employer(name='$name', cpf='$cpf', salary=$salary)"
     }
 }

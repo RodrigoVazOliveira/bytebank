@@ -1,3 +1,6 @@
+import br.com.bytebank.models.accounts.AccountChain
+import br.com.bytebank.models.accounts.AccountSaving
+
 fun testeOrientacaoAObjecto() {
     val account = AccountChain(titular = "rodrigo vaz", numberAccount = 1000)
     println(account.titular)
