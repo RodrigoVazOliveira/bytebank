@@ -1,16 +1,18 @@
+import br.com.bytebank.models.Client
 import br.com.bytebank.models.accounts.AccountChain
 import br.com.bytebank.models.accounts.AccountSaving
+import java.util.UUID
 
 fun main() {
     println("Ola, bytebank")
     val contaCorrente = AccountChain(
         numberAccount = 1001,
-        titular = "Rodrigo Vaz"
+        titular = Client(name = "Rodrigo Vaz", cpf = UUID.randomUUID().toString(), password = "123123121231")
     )
 
     val accountSaving = AccountSaving(
         numberAccount = 1002,
-        titular = "Blau Araujo"
+        titular = Client(name = "Meretriz", cpf = UUID.randomUUID().toString(), password = "123123121231")
     )
 
     contaCorrente.depositar(200.00)

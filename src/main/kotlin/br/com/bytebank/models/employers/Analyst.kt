@@ -1,4 +1,4 @@
-package br.com.bytebank.models.accounts
+package br.com.bytebank.models.employers
 
 import br.com.bytebank.models.employers.Employer
 

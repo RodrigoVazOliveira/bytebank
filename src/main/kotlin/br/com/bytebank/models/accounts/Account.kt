@@ -1,6 +1,8 @@
 package br.com.bytebank.models.accounts
 
-abstract class Account(val titular: String, val numberAccount: Int) {
+import br.com.bytebank.models.Client
+
+abstract class Account(val titular: Client, val numberAccount: Int) {
 
     var balance: Double = 0.0
         protected set

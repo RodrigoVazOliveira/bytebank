@@ -1,11 +1,12 @@
+import br.com.bytebank.models.Client
 import br.com.bytebank.models.accounts.AccountChain
 import br.com.bytebank.models.accounts.AccountSaving
 
 fun testeOrientacaoAObjecto() {
-    val account = AccountChain(titular = "rodrigo vaz", numberAccount = 1000)
+    val account = AccountChain(titular = Client(name = "Rodrigo", cpf = "3432234", password = "34343223"), numberAccount = 1000)
     println(account.titular)
 
-    val accountMari = AccountSaving(numberAccount = 1001, titular = "Conta da mariana")
+    val accountMari = AccountSaving(numberAccount = 1001, titular = Client(name = "Mariana PF", cpf = "332432432", password = "324324"))
     accountMari.depositar(25000.00)
     println(accountMari.titular)
     println(accountMari.numberAccount)
@@ -18,7 +19,7 @@ fun testeOrientacaoAObjecto() {
     println("o numero Y $numeroY")
 
 
-    val accountJoao = AccountChain("Joao", 1002)
+    val accountJoao = AccountChain(Client(name = "Joao", cpf = "3432423", password = "3432423423"), 1002)
     var accountMaria = accountJoao
 
     println("A titula da conta joao ${accountJoao.titular}")

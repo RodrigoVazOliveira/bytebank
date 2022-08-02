@@ -1,6 +1,8 @@
 package br.com.bytebank.models.accounts
 
-class AccountSaving(titular: String, numberAccount: Int) :
+import br.com.bytebank.models.Client
+
+class AccountSaving(titular: Client, numberAccount: Int) :
     Account(titular, numberAccount) {
 
     override fun sacar(value: Double) {
