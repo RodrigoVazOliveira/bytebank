@@ -1,3 +1,4 @@
+import br.com.bytebank.Authenticable
 import br.com.bytebank.SystemInternal
 import br.com.bytebank.models.Client
 import br.com.bytebank.models.employers.Director
@@ -14,8 +15,15 @@ fun main() {
     systemInternal.entry(rodrigoClient, "23423423")
 
 
+    val fran = object : Authenticable {
+        val name = "Rodrigo"
+        val cpf = "3432432"
+        val password = "3243244"
 
+        override fun authenticate(password: String) = this.password == password
+    }
 
+    println("nome do cliente: ${fran.name}")
     println("bonificacao do diretor: ${director.bonicute}")
 
     val cliente = Client(name = "423", cpf = "3432", password = "3423")
