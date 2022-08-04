@@ -6,6 +6,12 @@ abstract class Account(val titular: Client, val numberAccount: Int) {
 
     var balance: Double = 0.0
         protected set
+    var  counter: Int = 0
+        private set
+
+    init {
+        counter++
+    }
 
     fun depositar(value: Double) {
         balance += value

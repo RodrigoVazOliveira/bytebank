@@ -13,6 +13,9 @@ fun main() {
     systemInternal.entry(manager, "123")
     systemInternal.entry(rodrigoClient, "23423423")
 
+
+
+
     println("bonificacao do diretor: ${director.bonicute}")
 
     val cliente = Client(name = "423", cpf = "3432", password = "3423")
