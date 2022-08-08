@@ -1,28 +1,21 @@
 package br.com.bytebank.applications
 
-import br.com.bytebank.models.accounts.Address
-
 fun main() {
-    println()
-    println(1)
-    println(1.0)
-    println(true)
-    println("testes")
-
-    printPersonalize(" 32432")
-    printPersonalize(1)
-    printPersonalize(1.0)
-    printPersonalize("adsfad")
-
-    val addressOne = Address("sdfasd", 343, " adsfads", "32423", "4323", "4334", "")
-    val addressTwo = Address("sdfasd", 343, " adsfads", "32423", "4323", "43341", "")
-
-    val isEqual = addressOne == addressTwo
-
-    println(isEqual)
-    println(addressOne)
+    println("início main")
+    functionOne()
+    println("fim main")
 }
 
-fun printPersonalize(value: Any) {
-    println(value)
+fun functionOne() {
+    println("início funcao1")
+    functionTwo()
+    println("fim funcao1")
+}
+
+fun functionTwo() {
+    println("início funcao2")
+    for (i in 1..5){
+        println(i)
+    }
+    println("fim funcao2")
 }
