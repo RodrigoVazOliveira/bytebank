@@ -1,6 +1,7 @@
 import br.com.bytebank.models.Client
 import br.com.bytebank.models.accounts.AccountChain
 import br.com.bytebank.models.accounts.AccountSaving
+import br.com.bytebank.models.exceptions.InsufficientFundsException
 
 fun testeOrientacaoAObjecto() {
     val account = AccountChain(titular = Client(name = "Rodrigo", cpf = "3432234", password = "34343223"), numberAccount = 1000)
@@ -38,10 +39,11 @@ fun testeOrientacaoAObjecto() {
     println("saldo atual de joao ${accountJoao.balance}")
     println("saldo atual de maiar ${accountMaria.balance}")
 
-    if (accountJoao.transfer(accountMaria, 250.00)) {
+    try {
+        accountJoao.transfer(accountMaria, 250.00)
         println("tranferencia efetuada com sucesso")
-    } else {
-        println("transferencia nao efetuada")
+    } catch (e:  InsufficientFundsException) {
+        println(e.message)
+        e.printStackTrace()
     }
-
 }

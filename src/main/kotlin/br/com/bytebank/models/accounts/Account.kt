@@ -1,6 +1,7 @@
 package br.com.bytebank.models.accounts
 
 import br.com.bytebank.models.Client
+import br.com.bytebank.models.exceptions.InsufficientFundsException
 
 abstract class Account(val titular: Client, val numberAccount: Int) {
 
@@ -19,13 +20,13 @@ abstract class Account(val titular: Client, val numberAccount: Int) {
 
     abstract fun sacar(value: Double)
 
-    fun transfer(destination: Account, value: Double): Boolean {
-        if (balance >= value) {
-            balance -= value
-            destination.depositar(value)
-            return true
+    fun transfer(destination: Account, value: Double) {
+        if (balance < value) {
+            throw InsufficientFundsException("O saldo atual e mehor queo valor transferido")
         }
 
-        return false
+        balance -= value
+        destination.depositar(value)
+        return true
     }
 }
