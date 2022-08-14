@@ -40,7 +40,7 @@ fun testeOrientacaoAObjecto() {
     println("saldo atual de maiar ${accountMaria.balance}")
 
     try {
-        accountJoao.transfer(accountMaria, 250.00)
+        accountJoao.transfer(accountMaria, 250.00, "3432423423")
         println("tranferencia efetuada com sucesso")
     } catch (e:  InsufficientFundsException) {
         println(e.message)
