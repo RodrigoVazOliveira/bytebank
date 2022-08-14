@@ -1,32 +1,10 @@
 package br.com.bytebank.applications
 
-import br.com.bytebank.models.exceptions.InsufficientFundsException
+import br.com.bytebank.models.accounts.Address
 
 fun main() {
-    val value = readLine()
-    if (value != null) {
-        checkFunds(value.toDouble())
-    }
+    val addressNull:Address? = null
+    val addressNotNull: Address = addressNull!!
+    addressNotNull.city
 
-}
-
-
-fun runClassCastException() {
-    throw ClassCastException()
-}
-
-fun runArithmeticException() {
-    throw ArithmeticException()
-}
-
-fun runNumberFormatException() {
-    throw NumberFormatException()
-}
-
-fun checkFunds(value: Double): Double {
-    if (value <= 10.00) {
-        throw InsufficientFundsException("Saldo Insuficiente!")
-    }
-
-    return value;
 }
