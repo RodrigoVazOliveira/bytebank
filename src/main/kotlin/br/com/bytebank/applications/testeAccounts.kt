@@ -15,10 +15,11 @@ fun main() {
         titular = Client(name = "Meretriz", cpf = UUID.randomUUID().toString(), password = "123123121231")
     )
 
-    contaCorrente.depositar(200.00)
+    contaCorrente.depositar(28000.00)
     contaCorrente.sacar(25.00)
-    contaCorrente.transfer(accountSaving, 200.00, "123123121231")
-    accountSaving.depositar(100.00)
+    println("o valor do balanco e ${contaCorrente.balance}")
+    contaCorrente.transfer(accountSaving, 200.00, "12312312121")
+    accountSaving.depositar(2500000.00)
     accountSaving.sacar(200.00)
     accountSaving.transfer(contaCorrente, 2500.00, "123123121231")
 
