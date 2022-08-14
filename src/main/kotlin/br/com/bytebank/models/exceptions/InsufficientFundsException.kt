@@ -1,4 +1,4 @@
 package br.com.bytebank.models.exceptions
 
-class InsufficientFundsException(message: String) : Throwable(message = message) {
+class InsufficientFundsException(message: String) : Exception(message = message) {
 }
