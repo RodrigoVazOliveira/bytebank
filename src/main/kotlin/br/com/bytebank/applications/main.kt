@@ -12,6 +12,15 @@ fun main() {
 
     addressNull?.let { address ->
         println(address.city.length)
+        val sizeComplement: Int = address.complement?.length ?: 0
+        println("O tamanho do coomplemento e igual a $sizeComplement")
     }
     println(addressNull?.city)
+
+    teste("3423423321zcx")
+}
+
+fun teste(value: Any) {
+    val number: Int? = value as? Int
+    println("O valor do teste e $number")
 }

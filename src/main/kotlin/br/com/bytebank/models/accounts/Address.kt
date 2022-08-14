@@ -7,7 +7,7 @@ class Address(
     val city: String,
     val state: String,
     val zipCode: String,
-    val complement: String
+    val complement: String? = null
 ) {
 
 
