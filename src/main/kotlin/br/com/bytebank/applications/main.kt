@@ -16,12 +16,7 @@ fun main() {
         null
     }
 
-    val valurWithTax: Double? = if (value != null) {
-        value + (value * 0.1)
-    } else {
-        null
-    }
-
+    val valurWithTax: Double? = valueWithTax(value)
     if (value != null) {
         println("valor recebido: $value")
     } else {
@@ -29,6 +24,14 @@ fun main() {
     }
 
     println("valor com taxa: $valurWithTax")
+}
+
+fun valueWithTax(value: Double?): Double? {
+    if (value  == null) {
+        return null
+    }
+
+    return value + (value * 0.1)
 }
 
 fun functionOne() {
